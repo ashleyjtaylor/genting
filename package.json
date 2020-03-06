@@ -6,15 +6,25 @@
     "@testing-library/jest-dom": "^4.2.4",
     "@testing-library/react": "^9.3.2",
     "@testing-library/user-event": "^7.1.2",
+    "@zeit/next-sass": "^1.0.1",
+    "babel-plugin-styled-components": "^1.10.7",
+    "enzyme": "^3.11.0",
+    "enzyme-adapter-react-16": "^1.15.2",
+    "express": "^4.17.1",
+    "isomorphic-unfetch": "^3.0.0",
+    "jest": "^25.1.0",
+    "moment": "^2.24.0",
+    "next": "^9.2.2",
+    "node-sass": "^4.13.1",
     "react": "^16.13.0",
     "react-dom": "^16.13.0",
-    "react-scripts": "3.4.0"
+    "react-scripts": "3.4.0",
+    "styled-components": "^5.0.1"
   },
   "scripts": {
-    "start": "react-scripts start",
-    "build": "react-scripts build",
-    "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "dev": "node server.js",
+    "build": "next build",
+    "test": "jest"
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -29,6 +39,41 @@
       "last 1 chrome version",
       "last 1 firefox version",
       "last 1 safari version"
+    ]
+  },
+  "jest": {
+    "clearMocks": true,
+    "collectCoverage": true,
+    "collectCoverageFrom": [
+      "components/**/*.jsx"
+    ],
+    "coverageDirectory": "<rootDir>/__test__/coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 80,
+        "functions": 80,
+        "lines": 80,
+        "statements": -60
+      }
+    },
+    "moduleFileExtensions": [
+      "js",
+      "jsx"
+    ],
+    "modulePaths": [
+      "."
+    ],
+    "testMatch": [
+      "<rootDir>/**/*.test.js?(x)"
+    ],
+    "setupFiles": [
+      "<rootDir>/jest.setup.js"
+    ],
+    "testPathIgnorePatterns": [
+      "<rootDir>/node_modules/",
+      "<rootDir>/.next/",
+      "<rootDir>/__test__/mocks",
+      "<rootDir>/__test__/coverage"
     ]
   }
 }

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from 'styled-components';\nexport const Main = styled.main`\n  padding: 1rem;\n`;","map":null,"metadata":{},"sourceType":"module"}

@@ -1,0 +1,1 @@
+{"ast":null,"code":"import styled from 'styled-components';\nexport const PlanetCard = styled.div`\n  display: flex;\n  flex-direction: column;\n`;\nexport const Name = styled.h2`\n\n`;\nexport const Image = styled.img`\n\n`;\nexport const Link = styled.img`\n\n`;","map":null,"metadata":{},"sourceType":"module"}
